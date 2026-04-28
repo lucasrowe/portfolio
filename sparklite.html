@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparklite — Lucas Rowe</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    body { padding-top: var(--nav-h); }
+    .cs-hero { background-image: url('assets/sparklite-hero.png'); background-color: #4ce0b3; background-position: center top; }
+    .cs-problem-box { border-left-color: #0d9e76; }
+    .cs-problem-box .label { color: #0d5c43; }
+    .cs-outcome-box { background: #0d5c43; }
+    .cs-outcome-box .label { color: #d0f8ee; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="logo" href="index.html">Lucas Rowe</a>
+    <div class="nav-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="cs-hero"></div>
+
+  <div class="cs-content">
+
+    <div class="cs-project-header">
+      <div>
+        <div class="cs-project-name">Sparklite</div>
+        <div class="cs-project-type">UX Design &amp; Art Direction — Red Blue Games</div>
+      </div>
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item"><strong>Shipped</strong> November 2019</div>
+        <div class="cs-meta-item"><strong>Role</strong> UX Design &amp; Art Direction</div>
+        <div class="cs-meta-item"><strong>Platform</strong> PC, Switch, Xbox, PS4, Mobile</div>
+        <div class="cs-meta-item"><strong>Company</strong> Red Blue Games</div>
+      </div>
+    </div>
+
+    <div class="cs-problem-box">
+      <div class="label">Overview</div>
+      <p>Action Adventure game that retailed on all major game platforms and later was brought to iOS and Android.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>The Project</h2>
+      <p>Sparklite took over four years to make, with pauses in between to raise money from publishers and perform contract work for clients. After demoing the game for two years, we secured $300k in funding to complete and market the game, which allowed us to scale up our development. At its largest the core team consisted of a game engine programmer, UI programmer, game/UX designer, two gameplay programmers, and three pixel artists. Two of the roles I filled on the project were Art Director and UX Designer for game interfaces.</p>
+      <img class="cs-img" src="assets/sparklite-hero.png" alt="Sparklite gameplay" style="display:none;">
+    </div>
+
+    <div class="cs-section">
+      <h2>Storyboarding</h2>
+      <p>Many of our scripted story sequences were storyboarded in Figma to get a sense for how the scene will feel. Staying low-fidelity allows us to course-correct before committing resources to art, engineering, and audio.</p>
+      <img class="cs-img" src="assets/sparklite-storyboard.png" alt="Sparklite storyboards in Figma">
+    </div>
+
+    <div class="cs-section">
+      <h2>UX Design</h2>
+      <p>Game menus and complicated user interactions were mocked up in Figma prototypes. These were used to eliminate UX issues before investing in programming but also served as requirements for engineers. This was especially valuable for novel UX interactions that couldn't be referenced in other games.</p>
+      <video
+        id="ux-video"
+        src="assets/sparklite-ux-mockup.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        style="width:100%;border-radius:16px;border:1px solid var(--border);display:block;margin:24px 0;"
+      ></video>
+      <script>
+        (function() {
+          const v = document.getElementById('ux-video');
+          const KEY = 'sparklite-ux-time';
+          v.addEventListener('loadedmetadata', () => {
+            const t = parseFloat(localStorage.getItem(KEY));
+            if (t) v.currentTime = t;
+          });
+          v.addEventListener('timeupdate', () => {
+            localStorage.setItem(KEY, v.currentTime);
+          });
+        })();
+      </script>
+      <div class="cs-img-2col">
+        <img src="assets/sparklite-screen.png" alt="Sparklite UI mockups">
+        <img src="assets/sparklite-screen2.png" alt="Sparklite menu designs">
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h2>Art Direction</h2>
+      <p>One of my many roles throughout the production was providing Art Direction to our animators, environment artists, and illustrators. Aside from the game art, we also produced retail goods that required art direction. We also directed PR firms for trailer production.</p>
+      <p>We were fortunate to work with some of the best pixel artists in the industry and it was a privilege to lead this talented team. The sketches below are contributions from the team under my direction.</p>
+      <div style="background:var(--bg-subtle);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:16px;margin:24px 0;">
+        <img style="width:100%;border-radius:10px;border:1px solid var(--border);display:block;" src="assets/sparklite-artdir2.png" alt="Art direction — character and environment concepts">
+        <img style="width:100%;border-radius:10px;border:1px solid var(--border);display:block;" src="assets/sparklite-screen2.png" alt="Art direction — pixel art assets">
+        <img style="width:100%;border-radius:10px;border:1px solid var(--border);display:block;" src="assets/sparklite-artdir.png" alt="Art direction — world and asset design">
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h2>Results</h2>
+      <div class="cs-outcome-box">
+        <div class="label">Results</div>
+        <p>Sparklite shipped globally across all major platforms in November 2019. It was well-reviewed, receiving a 75 Metacritic score on Switch and received a Unity3D nomination for Best 2D Visuals. It was subsequently released to iOS and Android and received Best Foreign Mobile Game in the French Pégases 2022 Awards and has over a 4.5 star rating on both stores.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2024 Lucas Rowe</span>
+    <div class="footer-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <nav class="project-nav">
+    <a href="red-blue-website.html">← Red Blue</a>
+    <div class="divider"></div>
+    <a href="index.html">All Work</a>
+    <div class="divider"></div>
+    <a href="epic-allies.html">Epic Allies →</a>
+  </nav>
+
+</body>
+</html>

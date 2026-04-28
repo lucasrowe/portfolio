@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epic Allies — Lucas Rowe</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    body { padding-top: var(--nav-h); }
+    .cs-hero { background-image: url('assets/epic-allies-hero.png'); background-color: var(--blue); background-position: center top; }
+    .cs-problem-box { border-left-color: var(--blue); }
+
+    /* ── 4-phone mechanic grid ── */
+    .mechanic-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .mechanic-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* CSS phone bezel */
+    .phone-bezel {
+      width: 100%;
+      aspect-ratio: 9/16;
+      border-radius: 18px;
+      border: 6px solid #2a2a2a;
+      overflow: hidden;
+      background: #1a1a1a;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .phone-bezel::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36px;
+      height: 5px;
+      background: #1a1a1a;
+      border-radius: 3px;
+      z-index: 2;
+    }
+
+    .phone-bezel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .mechanic-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      text-align: center;
+    }
+
+    /* ── wireframes panel ── */
+    .wireframe-panel {
+      background: var(--bg-subtle);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+      overflow: hidden;
+    }
+
+    .wireframe-panel img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="logo" href="index.html">Lucas Rowe</a>
+    <div class="nav-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="cs-hero"></div>
+
+  <div class="cs-content">
+
+    <div class="cs-project-header">
+      <div>
+        <div class="cs-project-name">Epic Allies</div>
+        <div class="cs-project-type">UX Design &amp; Game Design</div>
+      </div>
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item"><strong>Year</strong> Study Began in 2017</div>
+        <div class="cs-meta-item"><strong>Role</strong> UX &amp; Game Designer</div>
+        <div class="cs-meta-item"><strong>Platform</strong> Android</div>
+        <div class="cs-meta-item"><strong>Partners</strong> UNC Chapel Hill, Duke, Caktus Group</div>
+      </div>
+    </div>
+
+    <div class="cs-problem-box">
+      <div class="label">Overview</div>
+      <p>Mobile game designed to improve the medication adherence of young men with HIV. Partnership with Caktus Consulting Group, a leading Django web development firm, and researchers at UNC Chapel Hill and Duke.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>The Game</h2>
+      <p>Epic Allies calls on players to take the role of a super-hero trying to save a city from a toxic disaster with the help of their other super-hero allies. Throughout that journey, Epic Allies employs an innovative approach to help improve medication uptake that is based on the Information-Motivation-Behavioral Skills model of health behavior change. To support this model, the app would need to include Behavior Tracking, Social Encouragement, Knowledge Building, and Player Investment (gamification).</p>
+
+      <!-- 4 phone mechanic screenshots -->
+      <div class="mechanic-grid">
+        <div class="mechanic-card">
+          <div class="phone-bezel">
+            <img src="assets/epic-allies-behavior.png" alt="Behavior Tracking screen">
+          </div>
+          <div class="mechanic-label">Behavior Tracking</div>
+        </div>
+        <div class="mechanic-card">
+          <div class="phone-bezel">
+            <img src="assets/epic-allies-social.png" alt="Social Encouragement screen">
+          </div>
+          <div class="mechanic-label">Social Encouragement</div>
+        </div>
+        <div class="mechanic-card">
+          <div class="phone-bezel">
+            <img src="assets/epic-allies-screens.png" alt="Knowledge Building screen">
+          </div>
+          <div class="mechanic-label">Knowledge Building</div>
+        </div>
+        <div class="mechanic-card">
+          <div class="phone-bezel">
+            <img src="assets/epic-allies-player.png" alt="Player Investment screen">
+          </div>
+          <div class="mechanic-label">Player Investment</div>
+        </div>
+      </div>
+
+      <p>These features were translated into the game world of Epic Allies as key locations and activities that existed throughout the player's city. We included a Health Center for behavior tracking and feedback, a Daily Dose newsstand for critical and useful knowledge building, cooperative games and social interactions to facilitate social support, and minigames to encourage investment and engagement.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>Our Process</h2>
+      <p>All of our user interactions were first wireframed for review by stakeholders and team members. Once approved, we built functional prototypes in Unity to avoid usability issues.</p>
+
+      <div class="wireframe-panel">
+        <img src="assets/epic-allies-wireframes2.png" alt="Epic Allies wireframes — survey screens, daily check-in, settings, health dashboard">
+      </div>
+
+      <p>After functional mockups are approved we begin development in earnest. The teams at Red Blue Games and Caktus followed Agile practices to coordinate the development of Epic Allies. At the end of each sprint, the development team would review the work with the research teams at UNC and Duke and confirm the direction of the next sprint.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>Results</h2>
+      <div class="cs-outcome-box">
+        <div class="label">Results</div>
+        <p>Red Blue's role on the project is complete but research is ongoing by UNC, Duke, and Caktus Consulting. Researchers will be going over the data collected by the app alongside information that clinicians gather from the participants. We are eager to see what kind of impact games can have on personal health and positive behavior.</p>
+        <p style="margin-top:12px;font-size:14px;color:rgba(255,255,255,0.65);">More information: <em>JMIR Serious Games — Epic Allies: Development of a Gaming App to Improve Antiretroviral Therapy Adherence Among Young HIV-Positive Men Who Have Sex With Men</em> · Duke Global Health Institute</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2024 Lucas Rowe</span>
+    <div class="footer-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <nav class="project-nav">
+    <a href="sparklite.html">← Sparklite</a>
+    <div class="divider"></div>
+    <a href="index.html">All Work</a>
+  </nav>
+
+</body>
+</html>

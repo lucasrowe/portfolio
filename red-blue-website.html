@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Blue Games Websites — Lucas Rowe</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    body { padding-top: var(--nav-h); }
+    .cs-hero {
+      background-image: url('assets/redblue-screen.png');
+      background-color: #f0f0f0;
+      background-position: center top;
+    }
+    .cs-problem-box { border-left-color: var(--blue); }
+
+    /* ── Device showcase ── */
+    .device-scroll-outer {
+      margin: 32px 0;
+      padding: 32px 0;
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .device-scroll-track {
+      display: flex;
+      gap: 40px;
+      align-items: flex-end;
+      padding: 0 40px 8px;
+      width: max-content;
+    }
+
+    /* Each game = one iPad + one iPhone side by side */
+    .device-pair {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+    }
+
+    .device-pair + .device-pair {
+      padding-left: 40px;
+      border-left: 1px solid var(--border);
+    }
+
+    /* Fixed HEIGHT so all iPads are same height regardless of image resolution */
+    .device-ipad {
+      flex-shrink: 0;
+    }
+
+    .device-ipad img {
+      height: 340px;
+      width: auto;
+      display: block;
+    }
+
+    /* iPhones: fixed height, smaller than iPads, object-fit contain for narrow images */
+    .device-iphone {
+      flex-shrink: 0;
+      height: 220px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .device-iphone img {
+      max-height: 100%;
+      width: auto;
+      max-width: 120px;
+      display: block;
+    }
+
+    .device-game-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    /* Scroll hint */
+    .scroll-hint {
+      font-size: 12px;
+      color: var(--text-3);
+      font-weight: 500;
+      margin-bottom: 16px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Sparklite landing image panel */
+    .image-panel {
+      background: var(--bg-subtle);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+
+    .image-panel img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="logo" href="index.html">Lucas Rowe</a>
+    <div class="nav-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="cs-hero"></div>
+
+  <div class="cs-content">
+
+    <div class="cs-project-header">
+      <div>
+        <div class="cs-project-name">Red Blue Games Websites</div>
+        <div class="cs-project-type">Web Design — Red Blue Games</div>
+      </div>
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item"><strong>Launched</strong> 2018</div>
+        <div class="cs-meta-item"><strong>Role</strong> Designer</div>
+        <div class="cs-meta-item"><strong>Platform</strong> Web</div>
+        <div class="cs-meta-item"><strong>Goal</strong> Convert to product sales or partnerships</div>
+      </div>
+    </div>
+
+    <div class="cs-problem-box">
+      <div class="label">Overview</div>
+      <p>Designed and built websites to support Red Blue Games company pages, including company services and landing pages for individual games.</p>
+    </div>
+
+    <!-- COMPANY WEBSITE -->
+    <div class="cs-section">
+      <h2>Company Website</h2>
+      <p>Responsive landing page and children pages for company information, services, and lightweight teases of each of our products.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;margin-bottom:20px;">
+        <span class="pill">Audience: Partner companies &amp; game publishers</span>
+        <span class="pill">Goal: Convert to product sales or partnerships</span>
+        <span class="pill">Design Aesthetic: Fun and credible</span>
+        <span class="pill">Tech Stack: Bootstrap, JQuery, Github Pages (Jekyll and Liquid)</span>
+      </div>
+      <div class="image-panel">
+        <img src="assets/redblue-company.png" alt="Red Blue Games company website">
+      </div>
+      <p>Red Blue Games launched small minigames, each taking an aggressive, one-month timeline to create. To do this we took advantage of in-house created UX templates both in the games and on the website. The web used Liquid and Jekyll to create responsive, lightweight landing pages for each of our minigames. This allowed us to generate websites with little overhead.</p>
+    </div>
+
+    <!-- MINIGAMES DEVICE SHOWCASE -->
+    <div class="cs-section">
+      <h2>Minigame Landing Pages</h2>
+      <p>Each minigame received its own responsive landing page, designed to work across tablet and mobile. The pages reused the game's existing art and branding to keep production time low while still feeling polished and cohesive with the game itself.</p>
+    </div>
+
+  </div>
+
+  <!-- Full-bleed scroll section -->
+  <div class="device-scroll-outer">
+    <div class="scroll-hint">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Scroll to see all minigames
+    </div>
+    <div class="device-scroll-track">
+
+      <!-- Mini Fish -->
+      <div class="device-pair">
+        <div>
+          <div class="device-ipad">
+            <img src="assets/rbg-ipad-minifish.png" alt="Mini Fish on iPad">
+          </div>
+          <div class="device-game-label">Mini Fish</div>
+        </div>
+        <div class="device-iphone">
+          <img src="assets/rbg-iphone-minifish.png" alt="Mini Fish on iPhone">
+        </div>
+      </div>
+
+      <!-- Mini Nuts -->
+      <div class="device-pair">
+        <div>
+          <div class="device-ipad">
+            <img src="assets/rbg-ipad-mininuts.png" alt="Mini Nuts on iPad">
+          </div>
+          <div class="device-game-label">Mini Nuts</div>
+        </div>
+        <div class="device-iphone">
+          <img src="assets/rbg-iphone-mininuts.png" alt="Mini Nuts on iPhone">
+        </div>
+      </div>
+
+      <!-- Mini Stack -->
+      <div class="device-pair">
+        <div>
+          <div class="device-ipad">
+            <img src="assets/rbg-ipad-ministack.png" alt="Mini Stack on iPad">
+          </div>
+          <div class="device-game-label">Mini Stack</div>
+        </div>
+        <div class="device-iphone">
+          <img src="assets/rbg-iphone-ministack.png" alt="Mini Stack on iPhone">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cs-content" style="padding-top:48px;">
+
+    <!-- SPARKLITE LANDING PAGE -->
+    <div class="cs-section">
+      <h2>Sparklite Landing Page</h2>
+      <p>A landing page for the studio's flagship title, Sparklite, showcasing the charming art and engaging game world. It was important for this page to be memorable because press articles and marketplaces would link directly to this page.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;margin-bottom:20px;">
+        <span class="pill">Audience: Press and Players</span>
+        <span class="pill">Goal: Convert to newsletter signups and store clicks</span>
+        <span class="pill">Design Aesthetic: Rich, colorful, and engaging</span>
+        <span class="pill">Tech Stack: Bootstrap, Javascript, Github Pages</span>
+      </div>
+      <div class="image-panel">
+        <img src="assets/sparklite-web.gif" alt="Sparklite landing page — scroll animation">
+      </div>
+      <p>We reused game art and used a dramatic parallax effect to create a sense of flying over the game world. The first wipe past the clouds reveals the dynamic and colorful game world, providing a sense of wonder. The site's minimalism also allows for the gorgeous pixel art to speak for itself.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>Results</h2>
+      <div class="cs-outcome-box">
+        <div class="label">Results</div>
+        <p>The Red Blue Games websites served as the primary touchpoint for publisher outreach, press coverage, and direct consumer sales across all of the studio's titles. The design system and templating approach enabled rapid deployment of new game microsites with minimal engineering overhead — a critical capability for a small indie studio shipping multiple titles.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2024 Lucas Rowe</span>
+    <div class="footer-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <nav class="project-nav">
+    <a href="plan-decider.html">← Plan Decider</a>
+    <div class="divider"></div>
+    <a href="index.html">All Work</a>
+    <div class="divider"></div>
+    <a href="sparklite.html">Sparklite →</a>
+  </nav>
+
+</body>
+</html>

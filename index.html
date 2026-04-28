@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Rowe — Designer & Product Manager</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    body { padding-top: var(--nav-h); }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 40px 64px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 24px;
+    }
+
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--text-3);
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 3.5vw, 46px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 28px;
+      text-wrap: pretty;
+    }
+
+    .hero h1 .accent {
+      color: var(--blue);
+    }
+
+    .hero-pills {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    /* ── ABOUT ── */
+    .about-strip {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-inner h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 12px;
+    }
+
+    .about-inner p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text-2);
+    }
+
+    .resume-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: var(--text);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: background 0.15s, transform 0.15s;
+    }
+
+    .resume-btn:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    /* ── WORK GRID ── */
+    .work-section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 64px 40px 80px;
+    }
+
+    .work-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 28px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Featured card spans full width */
+    .work-card.featured {
+      grid-column: 1 / -1;
+    }
+
+    .work-card.featured .card-bg {
+      aspect-ratio: 21/9;
+    }
+
+    /* ── CARD HOVER TAGLINE ANIMATION ── */
+    .work-card .card-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 16px 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: padding 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+
+    .work-card .card-tagline {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin-top: 0;
+      transition: max-height 0.35s cubic-bezier(0.25,0.46,0.45,0.94),
+                  opacity 0.3s ease 0.05s,
+                  margin-top 0.35s ease;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .work-card:hover .card-tagline {
+      max-height: 28px;
+      opacity: 1;
+      margin-top: 5px;
+    }
+    .card-blue   { background-color: #7ab0da; }
+    .card-terra  { background-color: #ca5f59; }
+    .card-green  { background-color: #4ce0b3; }
+    .card-navy   { background-color: #2a5a84; }
+
+    .label-blue  { background: rgba(4,22,42,0.82); }
+    .label-terra { background: rgba(50,16,14,0.88); }
+    .label-green { background: rgba(0,45,33,0.88); }
+
+    .year-blue  { background: var(--blue-light); color: var(--blue-dark); }
+    .year-terra { background: var(--terracotta-light); color: var(--terracotta-dark); }
+    .year-green { background: #d0f8ee; color: #0d5c43; }
+
+    /* ── CONTACT ── */
+    .contact-strip {
+      border-top: 1px solid var(--border);
+      padding: 64px 40px;
+      text-align: center;
+    }
+
+    .contact-strip h2 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .contact-strip p {
+      font-size: 15px;
+      color: var(--text-2);
+      margin-bottom: 24px;
+    }
+
+    .contact-strip .cta-email {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 2px;
+      transition: color 0.15s;
+    }
+
+    .contact-strip .cta-email:hover { color: var(--blue); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a class="logo" href="index.html">Lucas Rowe</a>
+    <div class="nav-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Designer &amp; Product Manager</div>
+    <h1>I'm <span class="accent">Lucas</span>, a Designer and Product&nbsp;Manager with a passion for building delightful user experiences with talented teams</h1>
+    <div class="hero-pills">
+      <span class="pill">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="#7ab0da" stroke-width="1.5"/><path d="M4 7h6M7 4v6" stroke="#7ab0da" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Product &amp; Design Lead at Onyx
+      </span>
+      <span class="pill">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="6" r="2.5" stroke="#1e4561" stroke-width="1.5"/><path d="M7 1C4.24 1 2 3.24 2 6c0 3.5 5 8 5 8s5-4.5 5-8c0-2.76-2.24-5-5-5z" stroke="#1e4561" stroke-width="1.5"/></svg>
+        Durham, NC → Remote
+      </span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-strip">
+    <div class="about-inner">
+      <div>
+        <h2>About</h2>
+        <p>I work at the intersection of product strategy and interaction design — turning complex problems into clear, intuitive experiences. I've led design on AI tools, health-tech games, and insurance products, always collaborating closely with engineers and stakeholders from first sketch to shipped product.</p>
+        <a class="resume-btn" href="#">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 2h7l3 3v7H2V2z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 2v3h3" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 7h6M4 9.5h4" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg>
+          View Resume
+        </a>
+      </div>
+      <div>
+        <h2>Skills</h2>
+        <div class="skill-tags">
+          <span class="skill-tag">Product Strategy</span>
+          <span class="skill-tag">UX Design</span>
+          <span class="skill-tag">Interaction Design</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">User Research</span>
+          <span class="skill-tag">Design Systems</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Agile / Scrum</span>
+          <span class="skill-tag">Game Design</span>
+          <span class="skill-tag">Art Direction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work-section">
+    <div class="work-section-label">Selected Work</div>
+    <div class="work-grid">
+
+      <!-- Oliver -->
+      <a class="work-card" href="project-oliver.html">
+        <div class="card-bg card-blue" style="background-image: url('assets/oliver-hero.png'); background-position: center top;"></div>
+        <div class="card-label label-blue">
+          <div class="card-title">AI-Powered Legal Tool</div>
+          <div class="card-role">Product Designer</div>
+          <div class="card-tagline">Using hi-fidelity prototypes to secure a strategic partnership</div>
+        </div>
+        <div class="year-pill year-blue">2024</div>
+      </a>
+
+      <!-- Plan Decider -->
+      <a class="work-card" href="plan-decider.html">
+        <div class="card-bg card-terra" style="background-image: url('assets/plan-decider-screen4.png'); background-position: center top;"></div>
+        <div class="card-label label-terra">
+          <div class="card-title">Plan Decider</div>
+          <div class="card-role">PM &amp; UX Design</div>
+          <div class="card-tagline">Reducing sales agent handle time · +1.5% win rate</div>
+        </div>
+        <div class="year-pill year-terra">2023</div>
+      </a>
+
+      <!-- Red Blue Website -->
+      <a class="work-card" href="red-blue-website.html">
+        <div class="card-bg card-blue" style="background-image: url('assets/redblue-screen.png'); background-position: center top; background-color: #f0f0f0;"></div>
+        <div class="card-label label-blue">
+          <div class="card-title">Red Blue Website</div>
+          <div class="card-role">Designer</div>
+          <div class="card-tagline">We make the world more fun</div>
+        </div>
+        <div class="year-pill year-blue">2022</div>
+      </a>
+
+      <!-- Sparklite -->
+      <a class="work-card" href="sparklite.html">
+        <div class="card-bg card-green" style="background-image: url('assets/sparklite-hero.png'); background-position: center top;"></div>
+        <div class="card-label label-green">
+          <div class="card-title">Sparklite</div>
+          <div class="card-role">UX Design &amp; Art Direction</div>
+          <div class="card-tagline">75 Metacritic · Pégases Award · 4.5★ on mobile</div>
+        </div>
+        <div class="year-pill year-green">2019</div>
+      </a>
+
+      <!-- Epic Allies -->
+      <a class="work-card" href="epic-allies.html">
+        <div class="card-bg card-blue" style="background-image: url('assets/epic-allies-hero.png'); background-position: center;"></div>
+        <div class="card-label label-blue">
+          <div class="card-title">Epic Allies</div>
+          <div class="card-role">UX Design &amp; Game Design</div>
+          <div class="card-tagline">Published in JMIR Serious Games</div>
+        </div>
+        <div class="year-pill year-blue">2017</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTACT (hidden)
+  <section class="contact-strip">
+    <h2>Let's work together</h2>
+    <p>Open to product design and PM roles. I'd love to hear about your team.</p>
+    <a class="cta-email" href="mailto:lucas@example.com">lucas@example.com</a>
+  </section>
+  -->
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <span>© 2024 Lucas Rowe</span>
+    <div class="footer-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>

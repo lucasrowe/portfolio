@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Decider — Lucas Rowe</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    body { padding-top: var(--nav-h); }
+    .cs-hero { background-image: url('assets/plan-decider-screen4.png'); background-color: var(--terracotta); background-position: center top; }
+    .cs-problem-box { border-left-color: var(--terracotta); }
+    .cs-problem-box .label { color: var(--terracotta-dark); }
+    .cs-outcome-box { background: var(--terracotta-dark); }
+    .cs-outcome-box .label { color: var(--terracotta-light); }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="logo" href="index.html">Lucas Rowe</a>
+    <div class="nav-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="cs-hero"></div>
+
+  <div class="cs-content">
+
+    <div class="cs-project-header">
+      <div>
+        <div class="cs-project-name">Plan Decider Quoting Tool</div>
+        <div class="cs-project-type">Product Manager &amp; UX Design — Assurance IQ</div>
+      </div>
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item"><strong>Year</strong> 2023</div>
+        <div class="cs-meta-item"><strong>Role</strong> PM &amp; UX Designer</div>
+        <div class="cs-meta-item"><strong>Platform</strong> 3 Lines of Insurance</div>
+        <div class="cs-meta-item"><strong>Goal</strong> Improved conversion and retention</div>
+      </div>
+    </div>
+
+    <div class="cs-problem-box">
+      <div class="label">The Problem</div>
+      <p>Assurance IQ has an industry-leading recommendation engine for insurance products, yet the quoting tools available to agents failed to support it. The main problems were that Agents could only view one product at a time and could not clearly identify the recommended plan. It was clear that a more dynamic tool was needed to help agents compare more plan configurations and understand the recommendation. To solve this, we did intense discovery with our agents to align the quoting tool to their mental quoting model and added table-stakes features like being able to compare multiple plans side-by-side.</p>
+    </div>
+
+    <div class="cs-section">
+      <h2>Overview</h2>
+      <p>Unified tool for quoting insurance products of any type, from Health, to Medicare, and Life Insurance.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+        <span class="pill">Goal: Improved conversion and retention</span>
+        <span class="pill">Tech Stack: Bootstrap, JQuery, Github Pages (Jekyll and Liquid)</span>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h2>Side-by-Side Plan Comparison</h2>
+      <p>In order to enable plan comparisons, we created a side-by-side view of plans that allow agents to see all possible plans simultaneously. For a typical user this might be overwhelming but for our Agents, who are experts with the products and software, this approach made sure they had all the specific details right at their fingertips rather than having to dig.</p>
+      <img class="cs-img" src="assets/plan-decider-screen4.png" alt="Plan Decider quoting interface">
+    </div>
+
+    <div class="cs-section">
+      <h2>Plan Configuration</h2>
+      <p>We split the Plan Decider into two separate steps; plan comparison, and plan configuration. We compared this to buying a car, when you first pick your car in the showroom and then configure the details later. In our interface, after a plan is selected by an Agent a new Product Configuration panel appears, allowing them to select riders and adjust other aspects of their Life insurance product. Splitting these interactions into two steps simplified the comparison interface and enabled the configuration step to be unique to each product.</p>
+      <img class="cs-img" src="assets/plan-decider-screen5.png" alt="Side-by-side plan comparison view">
+      <img class="cs-img" src="assets/plan-decider-screen1.png" alt="Plan configuration panel" style="display:none;">
+    </div>
+
+    <div class="cs-section">
+      <h2>Recommendation Transparency</h2>
+      <p>For product recommendations to be valuable to users, it's essential that they understand why the recommendation fits their customer. We added informational features to teach Agents how the calculations are made and how they relate to their customer. Codifying this information lifted the curtains on our black box of data science based recommendations and helped internal team members and trainers also better understand how the calculation worked.</p>
+      <img class="cs-img" src="assets/plan-decider-screen3.png" alt="Recommendation explanation features">
+    </div>
+
+    <div class="cs-section">
+      <h2>The Results</h2>
+      <div class="cs-outcome-box">
+        <div class="label">Results</div>
+        <p>The Plan Decider was rolled out to a single sales team as an experimental feature and data from that team was compared against all other agents. The experiment was a clear success, with agents using Plan Decider seeing a handle time reduction of 3 minutes, on average, and an increased win rate of 1.5%. The feature was then rolled out to all agents and continued to receive very positive feedback from agents.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2024 Lucas Rowe</span>
+    <div class="footer-links">
+      <a href="https://github.com/lucasrowe" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/lucasrowe/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <nav class="project-nav">
+    <a href="project-oliver.html">← Oliver</a>
+    <div class="divider"></div>
+    <a href="index.html">All Work</a>
+    <div class="divider"></div>
+    <a href="red-blue-website.html">Red Blue →</a>
+  </nav>
+
+</body>
+</html>

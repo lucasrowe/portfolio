@@ -378,3 +378,14 @@ a { color: inherit; text-decoration: none; }
   color: var(--text-2);
   border: 1px solid var(--border);
 }
+
+@media (max-width: 900px) {
+  .cs-project-header {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .cs-meta-grid {
+    justify-content: flex-start;
+  }
+}
